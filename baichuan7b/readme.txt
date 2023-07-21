@@ -1,4 +1,8 @@
 
+依赖环境参考
+https://github.com/baichuan-inc/Baichuan-7B
+
+
 单机运行
 python -m torch.distributed.run --nproc_per_node=8 \
     --master_port=7875 train_test.py \
