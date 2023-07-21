@@ -1,6 +1,5 @@
 
-依赖环境参考
-https://github.com/baichuan-inc/Baichuan-7B
+
 
 
 单机运行
@@ -18,3 +17,15 @@ deepspeed --hostfile=hostfile --master_port=7875  train_test.py  \
 --deepspeed --deepspeed_config deepspeed_test.json \
 --gradient_checkpointing \
 &> multi_node_training.log
+
+
+依赖环境参考
+https://github.com/baichuan-inc/Baichuan-7B
+
+xformers安装
+
+git clone https://github.com/facebookresearch/xformers.git
+cd xformers
+git submodule update --init --recursive
+pip install -r requirements.txt
+pip install -e .
